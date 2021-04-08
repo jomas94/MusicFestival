@@ -1,0 +1,31 @@
+{
+  "name": "musicfestival",
+  "version": "1.0.0",
+  "description": "Primer proyecto con SASS y Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomas94/MusicFestival.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "Node",
+    "NPM"
+  ],
+  "author": "Jomario Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomas94/MusicFestival/issues"
+  },
+  "homepage": "https://github.com/jomas94/MusicFestival#readme",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
+}
