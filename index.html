@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <h1>Indie-Rock Festival</h1>
+   <header class="header"> 
+       <div class="contenedor contenido-header">
+           <h1>Indie-Rock Festival</h1>
+
+            <nav class="navegacion-principal">
+                <a href="#">Line Up</a>
+                <a href="#">Galería</a>
+                <a href="#">Tickets</a>
+            </nav>
+       </div>
+   </header> 
+   <div class="video">
+       <div class="overlay">
+           <div class="contenedor contenido-video">
+            <h2> Indie-Rock Festival <span> Junio 2022, Bilbao, España</span></h2>
+           </div>
+       </div>
+        <video controls autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+
+        </video>
+   </div>
+   <div class="sobre-festival contenedor">
+        <div class="imagen">
+            <img src="build/img/imagen_vocalista.jpg" alt="imagen cantante">           
+        </div>
+        <div class="contenido-festival">
+            <h2>Indie-Rock Festival</h2>
+            <p class="fecha">Junio 2022, Bilbao</p>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, rerum. Aut magni minima esse neque? Harum suscipit maiores quo praesentium tempore vitae excepturi assumenda cum alias! Mollitia consectetur aspernatur dolore!</p> 
+        </div>
+   </div>
 </body>
 </html>
