@@ -2,41 +2,66 @@
 const { src, dest, series, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
-sass.compiler = require('dart-sass'); 
+const notify = require('gulp-notify');
+const webp = require('gulp-webp');
+const concat = require('gulp-concat')
 
-function compilarSASS() {
-    
-    return src("./src/scss/app.scss")
-    .pipe(sass())
-    .pipe( dest("./build/css") );
+const paths ={
+    imagenes: './src/img/**/*',
+    scss:'src/scss/**/*.scss',
+    js:'src/js/**/*.js'
+}
+
+function css() {
+    return src(paths.scss)
+    .pipe(sass({
+        outputStyle:'expanded'
+    }))
+    .pipe(dest('./build/css'));
     
 }
 
 function minificarcss() {
-    return src("./src/scss/app.scss")
+    return src(paths.scss)
     .pipe(sass({
         outputStyle:'compressed'
     }))
-    .pipe( dest("./build/css") );
+    .pipe(dest('./build/css'));
+    
+}
+
+function javascript() {
+    return src(paths.js)
+    .pipe(concat('bundle.js'))
+    .pipe(dest('./build/js'))
+    
+}
+
+function versionWebp(){
+    return src(paths.imagenes)
+    .pipe(webp())
+    .pipe(dest('./build/img'))
+    .pipe(notify({message:'Version Webp Lista'}));
     
 }
 
 function imagenes() {
-    return src('src/img/**/*')
+    return src(paths.imagenes)
     .pipe(imagemin())
     .pipe(dest('./build/img'))
+    .pipe(notify({message: 'Imagen Minificada'}));
     
 }
 
 function watchingFiles() {
-    watch("./src/scss/**/*.scss",compilarSASS);
+    watch(paths.scss,css);
     
 }
 
 
-exports.compilarSASS = compilarSASS;
-exports.minificar = minificarcss;
-exports.imagenes = imagenes;
-exports.watchingFiles = watchingFiles;
-//exports.default = series(compilarSASS); con default ejecutará con tan solo GULP en el cmd
-//exports.default = parallel(compilarSASS); todas las funciones empezarán a la vez
+// exports.css = css;
+// exports.minificar = minificarcss;
+// exports.imagenes = imagenes;
+// exports.watchingFiles = watchingFiles;
+// exports.default = series( css, imagenes, javascript, versionWebp, watchingFiles);
+exports.default = series( css, javascript, watchingFiles);
