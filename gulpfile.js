@@ -32,7 +32,7 @@ function minificarcss() {
 
 function javascript() {
     return src(paths.js)
-    .pipe(concat('bundle.js'))
+    .pipe(concat('scripts.js'))
     .pipe(dest('./build/js'))
     
 }
@@ -55,6 +55,7 @@ function imagenes() {
 
 function watchingFiles() {
     watch(paths.scss,css);
+    watch(paths.js,javascript);
     
 }
 
