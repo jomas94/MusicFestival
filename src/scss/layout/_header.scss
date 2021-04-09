@@ -21,6 +21,12 @@
         }
     }
 
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .3rem .3rem #444;
+    }
+
 }
 
 .navegacion-principal{
