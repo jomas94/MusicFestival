@@ -660,3 +660,24 @@ h3 {
 .btn-cerrar:hover {
   cursor: pointer;
 }
+
+.tickets {
+  padding: 5rem 0;
+}
+
+.tickets h3, .tickets p {
+  text-align: center;
+  color: #FFF;
+}
+
+.tickets .contenedor-tickets {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.tickets p {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}

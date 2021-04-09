@@ -1,0 +1,17 @@
+.tickets{
+    padding: $separacion 0;
+
+    h3,p{
+        text-align: center;
+        color: $blanco;
+    }
+    .contenedor-tickets{
+        margin-top: $separacion/2;
+        @include grid(2, $separacion)
+    }
+
+    p{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+}
