@@ -22,7 +22,8 @@
     }
 
     &.fijo{
-        position: fixed;
+        position: sticky;
+        top:0;
         width: 100%;
         box-shadow: 0 .3rem .3rem #444;
     }
@@ -38,6 +39,7 @@
     a{
         color: $blanco;
         font-size: 2rem;
+        padding: 0 .5rem;
 
         &:hover{
             color: $amarillo;

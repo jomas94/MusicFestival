@@ -17,7 +17,6 @@ function navegacionFija() {
 
             barra.classList.add('fijo');
         }
-        console.log(entries[0]);
     })
 
     //elemento a observar

@@ -11,10 +11,6 @@ function crearGaleria(){
         imagen.src = `build/img/thumb/${i}.webp`;
         imagen.dataset.imagenId = i;
 
-
-       
-
-
         imagen.onclick = mostrarImagen; //Añadir la función de mostrarImagen
 
         const lista = document.createElement('li');
