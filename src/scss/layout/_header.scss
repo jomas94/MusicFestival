@@ -1,5 +1,6 @@
 .header{
     background-color: $verde;
+    // position: sticky;
 
     .contenido-header{
         padding: $separacion/2 0;
@@ -24,8 +25,19 @@
     &.fijo{
         position: sticky;
         top:0;
+        left: 0;
         width: 100%;
         box-shadow: 0 .3rem .3rem #444;
+        transition: top .5s;
+        z-index: 1001;
+    }
+
+    &.hidden{
+        z-index: 1000;
+        top: -50px;
+        transition: top .5s;
+        width: 100%;
+
     }
 
 }

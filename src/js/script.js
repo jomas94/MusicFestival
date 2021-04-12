@@ -12,10 +12,12 @@ function navegacionFija() {
         if(entries[0].isIntersecting){
 
             barra.classList.remove('fijo');
+            barra.classList.add('hidden');
 
         }else{
 
             barra.classList.add('fijo');
+            barra.classList.remove('hidden');
         }
     })
 
