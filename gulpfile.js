@@ -7,9 +7,9 @@ const webp = require('gulp-webp');
 const concat = require('gulp-concat')
 
 //Utilidades CSS
-const autoprefixer = require('autoprefixer');// añade un prefijo donde sea necesario 
+const autoprefixer = require('autoprefixer');// añade los prefijos donde sea necesario(-webkit, -o-, -moz- etc) 
 const postcss = require('gulp-postcss'); // para transformar en css
-const cssnano = require('cssnano'); // quita los espacios
+const cssnano = require('cssnano'); // Minifica, quita los espacios
 const sourcemaps = require('gulp-sourcemaps'); // conserva la referencia al archivo original tras compilar
 
 //Utilidades JS 
