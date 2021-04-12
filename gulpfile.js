@@ -1,6 +1,6 @@
 
 const { src, dest, series, parallel, watch } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass'); //compila el scss a css
 const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const webp = require('gulp-webp');
@@ -25,7 +25,7 @@ const paths ={
 function css() {
     return src(paths.scss)
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass())// aqui compila el scss a css
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./build/css'));
