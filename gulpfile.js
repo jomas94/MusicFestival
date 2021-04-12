@@ -7,13 +7,13 @@ const webp = require('gulp-webp');
 const concat = require('gulp-concat')
 
 //Utilidades CSS
-const autoprefixer = require('autoprefixer');
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('autoprefixer');// añade un prefijo donde sea necesario 
+const postcss = require('gulp-postcss'); // para transformar en css
+const cssnano = require('cssnano'); // quita los espacios
+const sourcemaps = require('gulp-sourcemaps'); // conserva la referencia al archivo original tras compilar
 
-//Utilidades JS
-const terser = require('gulp-terser-js');
+//Utilidades JS 
+const terser = require('gulp-terser-js'); // // conserva la referencia al archivo original tras compilar
 const rename = require('gulp-rename');
 
 const paths ={
